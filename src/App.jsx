@@ -13,6 +13,10 @@ const APP = {
   minAndroid: "Android 8.0+",
   // El APK vive en /public/sgil.apk — se sube desde el proyecto, no desde la web
   apkUrl: "/legales.apk",
+  about: {
+    who: "Somos un estudio jurídico con más de una década de trayectoria, especializado en derecho civil, laboral y corporativo. Atendemos cada caso con el mismo rigor: seguimiento cercano, plazos claros y comunicación constante con el cliente.",
+    what: "Nos dedicamos a representar y asesorar a nuestros clientes en cada etapa de su proceso legal. Con Legales, digitalizamos esa gestión: expedientes, pagos y agenda quedan centralizados, para que ningún caso ni ninguna fecha se pierdan en el camino.",
+  },
   modules: [
     {
       id: "clientes",
@@ -102,6 +106,17 @@ export default function App() {
           </div>
         </section>
 
+        <section className="about">
+          <div className="about-col">
+            <span className="about-label">Quiénes somos</span>
+            <p>{APP.about.who}</p>
+          </div>
+          <div className="about-col">
+            <span className="about-label">A qué nos dedicamos</span>
+            <p>{APP.about.what}</p>
+          </div>
+        </section>
+
         <section className="ficha" aria-label="Ficha técnica">
           {[
             ["versión", APP.version],
@@ -131,7 +146,7 @@ export default function App() {
         <section className="install">
           <h2 className="title">Cómo instalarla</h2>
           <ol>
-            <li>Descarga el archivo <code>sgil.apk</code> desde el botón de arriba.</li>
+            <li>Descarga el archivo <code>legales.apk</code> desde el botón de arriba.</li>
             <li>Abre el archivo desde tus descargas.</li>
             <li>Si Android lo pide, permite la instalación desde orígenes desconocidos.</li>
             <li>Confirma la instalación y abre la app.</li>
@@ -168,7 +183,7 @@ html{scroll-behavior:smooth}
 /* NAV */
 .nav{position:sticky;top:0;z-index:20;background:rgba(247,245,240,.9);
   backdrop-filter:blur(10px);border-bottom:1px solid var(--line);
-  display:flex;align-items:center;gap:1.5rem;
+  display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:1rem;
   padding:.75rem clamp(1rem,5vw,3rem)}
 .brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:inherit}
 .logo{width:36px;height:36px;border-radius:8px;object-fit:cover;
@@ -176,12 +191,13 @@ html{scroll-behavior:smooth}
 .brandtext{display:flex;flex-direction:column;line-height:1.2}
 .brandtext strong{font-family:'Fraunces',serif;font-size:1.05rem;letter-spacing:.02em}
 .brandtext em{font-style:normal;font-size:.68rem;color:var(--dim)}
-.links{display:flex;gap:.25rem;margin-left:auto}
+.links{display:flex;gap:.25rem;justify-self:center}
 .links button{background:none;border:0;cursor:pointer;color:var(--dim);
   font:inherit;font-size:.85rem;padding:.4rem .7rem;border-radius:6px;transition:.15s}
 .links button:hover{color:var(--ink);background:#EFEBE3}
 .links button.on{color:var(--accent);background:var(--accent-soft);font-weight:600}
-.nav-btn{padding:.5rem 1.05rem;font-size:.85rem;background:var(--ink);color:var(--paper)}
+.nav-btn{padding:.5rem 1.05rem;font-size:.85rem;background:var(--ink);color:var(--paper);
+  justify-self:end}
 
 main{width:min(880px,92vw);margin:0 auto;flex:1;
   padding:clamp(3rem,8vw,6rem) 0;display:flex;flex-direction:column;
@@ -201,6 +217,13 @@ h1{font-family:'Fraunces',Georgia,serif;font-weight:600;
   box-shadow:0 4px 16px rgba(139,38,53,.22)}
 .primary:hover{box-shadow:0 8px 24px rgba(139,38,53,.3)}
 .meta{color:var(--dim);font-size:.85rem;font-family:'JetBrains Mono',monospace}
+
+/* ABOUT */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;
+  padding:1.75rem 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.about-label{display:block;font-family:'JetBrains Mono',monospace;font-size:.7rem;
+  text-transform:uppercase;letter-spacing:.12em;color:var(--accent);margin-bottom:.6rem}
+.about p{color:var(--dim);font-size:.95rem;max-width:42ch}
 
 /* FICHA */
 .ficha{display:grid;grid-template-columns:repeat(4,1fr);background:var(--panel);
@@ -239,8 +262,10 @@ footer{border-top:1px solid var(--line);padding:1.75rem clamp(1rem,5vw,3rem);
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
 
 @media(max-width:820px){
+  .nav{grid-template-columns:1fr auto}
   .links{display:none}
-  .nav-btn{margin-left:auto}
+  .nav-btn{grid-column:2}
+  .about{grid-template-columns:1fr;gap:1.5rem}
   .ficha{grid-template-columns:repeat(2,1fr)}
   .cell:nth-child(2){border-right:0}
   .cell:nth-child(-n+2){border-bottom:1px solid var(--line)}
