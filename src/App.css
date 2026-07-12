@@ -14,8 +14,8 @@ const APP = {
   // El APK vive en /public/sgil.apk — se sube desde el proyecto, no desde la web
   apkUrl: "/legales.apk",
   about: {
-    who: "Somos un equipo de estudiantes de Ingeniería de Sistemas e Inteligencia Artificial de la Universidad Privada Antenor Orrego, desarrollando soluciones tecnológicas aplicadas a problemas reales.",
-    what: "Nos dedicamos a diseñar aplicaciones móviles que digitalizan procesos administrativos. Con Legales, llevamos la gestión de un estudio jurídico —clientes, pagos, expedientes y agenda— a una sola app, reemplazando las hojas de cálculo y agendas físicas.",
+    who: "Somos un estudio jurídico con más de una década de trayectoria, especializado en derecho civil, laboral y corporativo. Atendemos cada caso con el mismo rigor: seguimiento cercano, plazos claros y comunicación constante con el cliente.",
+    what: "Nos dedicamos a representar y asesorar a nuestros clientes en cada etapa de su proceso legal. Con Legales, digitalizamos esa gestión: expedientes, pagos y agenda quedan centralizados, para que ningún caso ni ninguna fecha se pierdan en el camino.",
   },
   modules: [
     {
@@ -146,7 +146,7 @@ export default function App() {
         <section className="install">
           <h2 className="title">Cómo instalarla</h2>
           <ol>
-            <li>Descarga el archivo <code>sgil.apk</code> desde el botón de arriba.</li>
+            <li>Descarga el archivo <code>legales.apk</code> desde el botón de arriba.</li>
             <li>Abre el archivo desde tus descargas.</li>
             <li>Si Android lo pide, permite la instalación desde orígenes desconocidos.</li>
             <li>Confirma la instalación y abre la app.</li>
