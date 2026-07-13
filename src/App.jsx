@@ -9,7 +9,7 @@ const APP = {
   description:
     "Clientes, expedientes, pagos y agenda en una sola app Android. Sin hojas de cálculo, sin fechas olvidadas.",
   version: "1.0.1",
-  size: "99 MB",
+  size: "103.92 MB",
   minAndroid: "Android 8.0+",
   // El APK vive en /public/sgil.apk — se sube desde el proyecto, no desde la web
   apkUrl: "https://github.com/Dvid23/Legales/releases/download/v1.0.1/app-Legales.apk",
