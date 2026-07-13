@@ -9,10 +9,10 @@ const APP = {
   description:
     "Clientes, expedientes, pagos y agenda en una sola app Android. Sin hojas de cálculo, sin fechas olvidadas.",
   version: "1.0.0",
-  size: "14.2 MB",
+  size: "98.4 MB",
   minAndroid: "Android 8.0+",
   // El APK vive en /public/sgil.apk — se sube desde el proyecto, no desde la web
-  apkUrl: "/legales.apk",
+  apkUrl: "https://github.com/Dvid23/Legales/releases/download/v1.5/app-Legales.apk",
   about: {
     who: "Somos un estudio jurídico con más de una década de trayectoria, especializado en derecho civil, laboral y corporativo. Atendemos cada caso con el mismo rigor: seguimiento cercano, plazos claros y comunicación constante con el cliente.",
     what: "Nos dedicamos a representar y asesorar a nuestros clientes en cada etapa de su proceso legal. Con Legales, digitalizamos esa gestión: expedientes, pagos y agenda quedan centralizados, para que ningún caso ni ninguna fecha se pierdan en el camino.",
