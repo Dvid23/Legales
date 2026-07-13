@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import logo from "./assets/logo.jpg";
 
-/* ── Configuración ──────────────────────────────────────── */
+/* ── Configuración ────────────────────────────────────────- */
 const APP = {
   name: "Legales",
   fullName: "Sistema de Gestión Integral Legal",
