@@ -8,7 +8,7 @@ const APP = {
   tagline: "El estudio jurídico, ordenado.",
   description:
     "Clientes, expedientes, pagos y agenda en una sola app Android. Sin hojas de cálculo, sin fechas olvidadas.",
-  version: "1.0.0",
+  version: "1.0.1",
   size: "99 MB",
   minAndroid: "Android 8.0+",
   // El APK vive en /public/sgil.apk — se sube desde el proyecto, no desde la web
@@ -146,7 +146,7 @@ export default function App() {
         <section className="install">
           <h2 className="title">Cómo instalarla</h2>
           <ol>
-            <li>Descarga el archivo <code>legales.apk</code> desde el botón de arriba.</li>
+            <li>Descarga el archivo <code>app-Legales.apk</code> desde el botón de arriba.</li>
             <li>Abre el archivo desde tus descargas.</li>
             <li>Si Android lo pide, permite la instalación desde orígenes desconocidos.</li>
             <li>Confirma la instalación y abre la app.</li>
